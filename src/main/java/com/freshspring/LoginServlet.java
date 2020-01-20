@@ -14,7 +14,11 @@ public class LoginServlet extends HttpServlet{
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException{
+		System.out.println(request.getParameter("name"));
+		
 		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+		
+		
 		//Instead of PrintWriter, we will be using JSP since java is bad at dynamic html
 //		PrintWriter out = response.getWriter();
 //		out.println("<html>");
